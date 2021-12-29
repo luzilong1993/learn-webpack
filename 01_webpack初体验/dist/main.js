@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log(50),console.log(600),console.log("2021-10-12"),console.log("100.00")})();
