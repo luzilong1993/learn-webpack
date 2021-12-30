@@ -1,3 +1,4 @@
 .content {
-    color: red;
+    color: #12345678;
 }
+@import './test.css';

@@ -20,14 +20,37 @@ module.exports = {
                     // { loader: 'css-loader' },
                     // { loader: 'style-loader' }
                     'style-loader',
-                    'css-loader'
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1
+                        }
+                    },
+                    'postcss-loader'
+                    // {
+                    //     loader: 'postcss-loader',
+                    //     options: {
+                    //         postcssOptions: {
+                    //             plugins: [
+                    //                 // 可以修改现代的css特性使其适用
+                    //                 'postcss-preset-env'
+                    //             ]
+                    //         }
+                    //     }
+                    // }
                 ]
             },
             {
                 test: /\.less$/,
                 use: [
                     'style-loader',
-                    'css-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 2
+                        }
+                    },
+                    'postcss-loader',
                     'less-loader'
                 ]
             }
