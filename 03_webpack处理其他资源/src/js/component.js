@@ -10,7 +10,7 @@ function component() {
 
     // 创建一个img元素，设置src属性
     const imgEl = new Image();
-    imgEl.src = require('../img/1.jpeg').default;
+    imgEl.src = require('../img/1.jpeg');
 
     element.appendChild(imgEl);
 

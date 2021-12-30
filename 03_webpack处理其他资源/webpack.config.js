@@ -50,13 +50,32 @@ module.exports = {
             //     test: /\.(png|jpe?g|gif|svg)$/,
             //     type: 'asset/resource'
             // }
+            // {
+            //     test: /\.(png|jpe?g|gif|svg)$/,
+            //     use:[
+            //         {
+            //             loader: 'file-loader',
+            //             options:{
+            //                 esModule: false
+            //             }
+            //         }
+            //     ],
+            //     type: 'javascript/auto'
+            // }
             {
                 test: /\.(png|jpe?g|gif|svg)$/,
-                use:[
+                use: [
                     {
-                        loader: 'file-loader'
+                        loader: 'url-loader',
+                        options: {
+                            limit: 10 * 1024,
+                            name: '[name].[hash:8].[ext]',
+                            outputPath: 'img',
+                            esModule: false
+                        }
                     }
-                ]
+                ],
+                type: 'javascript/auto'
             }
         ]
     }
