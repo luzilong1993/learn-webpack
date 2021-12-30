@@ -1,0 +1,9 @@
+
+:fullscreen {
+
+}
+
+.content {
+    user-select: none;
+    transition: all 2s ease;
+}
