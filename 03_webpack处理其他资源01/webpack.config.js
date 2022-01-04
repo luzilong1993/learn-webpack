@@ -50,6 +50,9 @@ module.exports = {
             //     test: /\.(png|jpe?g|gif|svg)$/,
             //     type: 'asset/resource'
             // }
+
+            // 以前方式 file-loader和url-loader
+            
             // {
             //     test: /\.(png|jpe?g|gif|svg)$/,
             //     use:[
