@@ -17,40 +17,19 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.jsx?$/,
                 // 排除
                 exclude: /node_modules/,
                 use: [
                     {
-                        loader: 'babel-loader',
-                        // options: {
-                        //     // 使用预设
-                        //     presets: [
-                        //         // 根据browserslistrc配置读取时  推荐
-                        //         '@babel/preset-env'
-
-                        //         // 自己适配
-                        //         // [
-                        //         //     '@babel/preset-env',
-                        //         //     {
-                        //         //         targets: ['chrome 88']
-                        //         //     }
-                        //         // ]
-                        //     ]
-
-                        //     // 单个自己下载安装
-                        //     // plugins: [
-                        //     //     '@babel/plugin-transform-arrow-functions',
-                        //     //     '@babel/plugin-transform-block-scoping'
-                        //     // ]
-                        // }
+                        loader: 'babel-loader'
                     }
-
                 ]
             },
             {
                 test: /\.ts$/,
-                use:'ts-loader'
+                exclude: /node_modules/,
+                use: 'babel-loader'
             }
         ]
     },
