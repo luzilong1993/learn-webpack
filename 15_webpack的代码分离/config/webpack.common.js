@@ -36,6 +36,31 @@ const commonConfig = {
       // initial 处理同步导入
       // all 同步/异步均处理
       chunks: "all",
+      // 最小值 20000为默认值，即20kb
+      minSize: 200,
+      // 将大于maxSize的包，拆分成不小于minSize的包
+      maxSize: 200,
+      // minChunks表示引入的包，至少被导入了几次
+      minChunks: 1,
+      cacheGroups: {
+        defaultVendors: {
+          test: /[\\/]node_modules[\\/]/,
+          filename: "[id]_vendors.js",
+          // 优先级
+          priority: -10,
+          // reuseExistingChunk: true,
+        },
+        // bar: {
+        //   test: /bar_/,
+        //   filename: "[id]_bar.js",
+        // },
+        default: {
+          minChunks: 2,
+          filename: 'common_[id].js',
+          // 优先级
+          priority: -20,
+        }
+      },
     },
   },
   module: {
