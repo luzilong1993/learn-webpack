@@ -1,0 +1,1 @@
+(self.webpackChunklearn_webpack=self.webpackChunklearn_webpack||[]).push([[83],{506:()=>{console.log("bar_02.js")}}]);
