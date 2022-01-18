@@ -15,8 +15,9 @@ const commonConfig = {
     index: "./src/index.js",
   },
   output: {
-    filename: "[name].bundle.js",
     path: resolveApp("./build"),
+    filename: "[name].bundle.js",
+    chunkFilename: '[name].chunk.js'
   },
   resolve: {
     extensions: [".wasm", ".mjs", ".js", ".json", ".jsx", ".ts", ".vue"],
