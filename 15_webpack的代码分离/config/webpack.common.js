@@ -17,7 +17,7 @@ const commonConfig = {
   output: {
     path: resolveApp("./build"),
     filename: "[name].bundle.js",
-    chunkFilename: '[name].chunk.js'
+    chunkFilename: "[name].chunk.js",
   },
   resolve: {
     extensions: [".wasm", ".mjs", ".js", ".json", ".jsx", ".ts", ".vue"],
@@ -38,9 +38,9 @@ const commonConfig = {
       // all 同步/异步均处理
       chunks: "all",
       // 最小值 20000为默认值，即20kb
-      minSize: 200,
+      minSize: 20000,
       // 将大于maxSize的包，拆分成不小于minSize的包
-      maxSize: 200,
+      maxSize: 20000,
       // minChunks表示引入的包，至少被导入了几次
       minChunks: 1,
       cacheGroups: {
@@ -57,11 +57,16 @@ const commonConfig = {
         // },
         default: {
           minChunks: 2,
-          filename: 'common_[id].js',
+          filename: "common_[id].js",
           // 优先级
           priority: -20,
-        }
+        },
       },
+    },
+    // true/multiple
+    // single
+    runtimeChunk: {
+      name: (entrypoint) => `runtimechunk~${entrypoint.name}`,
     },
   },
   module: {

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunklearn_webpack=self.webpackChunklearn_webpack||[]).push([[212],{768:(e,n,u)=>{function a(e,n){return e*n}u.r(n),u.d(n,{mul:()=>a})}}]);
