@@ -1,0 +1,10 @@
+(()=>{"use strict";var __webpack_modules__={"./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/(__unused_webpack_module,__unused_webpack___webpack_exports__,__webpack_require__)=>{eval("/* harmony import */ var _math__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./math */ \"./src/math.js\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n\n\nconsole.log((0,_math__WEBPACK_IMPORTED_MODULE_1__.cube)(2));\nvar titleDiv = document.createElement('div');\ntitleDiv.className = 'title';\ndocument.body.appendChild('title');\nvar h2Element = document.createElement('h2');\ndocument.body.appendChild('h2Element');\n\n//# sourceURL=webpack://learn-webpack/./src/index.js?")},"./src/math.js":
+/*!*********************!*\
+  !*** ./src/math.js ***!
+  \*********************/(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{eval('/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   "cube": () => (/* binding */ cube)\n/* harmony export */ });\n/* unused harmony export squere */\nfunction squere(x) {\n  return x * x;\n}\nfunction cube(x) {\n  return x * x * x;\n}\n\n//# sourceURL=webpack://learn-webpack/./src/math.js?')},"./src/style.css":
+/*!***********************!*\
+  !*** ./src/style.css ***!
+  \***********************/()=>{eval("// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://learn-webpack/./src/style.css?")}},__webpack_module_cache__={};function __webpack_require__(e){var _=__webpack_module_cache__[e];if(void 0!==_)return _.exports;var r=__webpack_module_cache__[e]={exports:{}};return __webpack_modules__[e](r,r.exports,__webpack_require__),r.exports}__webpack_require__.d=(e,_)=>{for(var r in _)__webpack_require__.o(_,r)&&!__webpack_require__.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:_[r]})},__webpack_require__.o=(e,_)=>Object.prototype.hasOwnProperty.call(e,_);var __webpack_exports__=__webpack_require__("./src/index.js")})();
