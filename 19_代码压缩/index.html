@@ -7,8 +7,11 @@
     <title>Document</title>
 
     <!-- ejs中的if判断 -->
-    
-  <script defer src="js/index.bundle.js"></script><link href="css/index.a983ad07.css" rel="stylesheet"></head>
+    <% if(process.env.NODE_ENV === 'production') {%>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <% } %>
+  </head>
   <body>
   </body>
 </html>
